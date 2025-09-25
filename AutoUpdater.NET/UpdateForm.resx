@@ -131,7 +131,7 @@
     <assembly alias="System.Drawing"
               name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
     <data name="webBrowser.Location" type="System.Drawing.Point, System.Drawing">
-        <value>94, 120</value>
+        <value>15, 120</value>
     </data>
     <data name="webBrowser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>2, 2, 2, 2</value>
@@ -140,7 +140,7 @@
         <value>23, 23</value>
     </data>
     <data name="webBrowser.Size" type="System.Drawing.Size, System.Drawing">
-        <value>538, 432</value>
+        <value>613, 432</value>
     </data>
     <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
     <data name="webBrowser.TabIndex" type="System.Int32, mscorlib">
@@ -231,7 +231,7 @@
         <value>Segoe UI, 9.75pt, style=Bold</value>
     </data>
     <data name="labelReleaseNotes.Location" type="System.Drawing.Point, System.Drawing">
-        <value>91, 90</value>
+        <value>12, 90</value>
     </data>
     <data name="labelReleaseNotes.Size" type="System.Drawing.Size, System.Drawing">
         <value>98, 17</value>
@@ -400,7 +400,7 @@
         <value>Top, Bottom, Left, Right</value>
     </data>
     <data name="webView2.Location" type="System.Drawing.Point, System.Drawing">
-        <value>94, 120</value>
+        <value>15, 120</value>
     </data>
     <data name="webView2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
         <value>2, 2, 2, 2</value>
@@ -409,7 +409,7 @@
         <value>23, 23</value>
     </data>
     <data name="webView2.Size" type="System.Drawing.Size, System.Drawing">
-        <value>538, 432</value>
+        <value>613, 432</value>
     </data>
     <data name="webView2.TabIndex" type="System.Int32, mscorlib">
         <value>3</value>

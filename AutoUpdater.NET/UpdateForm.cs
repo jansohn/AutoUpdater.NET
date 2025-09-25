@@ -169,7 +169,7 @@ internal sealed partial class UpdateForm : Form
 
     private void UpdateFormLoad(object sender, EventArgs e)
     {
-        var labelSize = new Size(webBrowser.Width, 0);
+        var labelSize = new Size(Width - labelUpdate.Left, 0);
         labelDescription.MaximumSize = labelUpdate.MaximumSize = labelSize;
     }
 

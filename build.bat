@@ -2,7 +2,7 @@
 msbuild "ZipExtractor\ZipExtractor.csproj" /p:Configuration=Release /verbosity:minimal
 
 :: .NET Framework 4.6.2
-msbuild "AutoUpdater.NET\AutoUpdater.NET.csproj" /p:OutputPath=build\lib\net462;TargetFramework=net462;Configuration=Release /verbosity:minimal
+dotnet build --configuration Release --framework net462 "AutoUpdater.NET\AutoUpdater.NET.csproj" --output "AutoUpdater.NET\build\lib\net462"
 
 :: .NET Core 3.1
 dotnet publish --configuration Release --framework netcoreapp3.1 "AutoUpdater.NET\AutoUpdater.NET.csproj" --output "AutoUpdater.NET\build\lib\netcoreapp3.1"

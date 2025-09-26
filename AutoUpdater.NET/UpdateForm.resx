@@ -990,6 +990,18 @@
     <data name="$this.Text" xml:space="preserve">
     <value>{0} {1} is available!</value>
   </data>
+  <data name="$this.RollbackText" xml:space="preserve">
+    <value>{0} rollback necessary!</value>
+  </data>
+  <data name="labelRollback.Text" xml:space="preserve">
+    <value>A rollback of {0} is necessary!</value>
+  </data>
+  <data name="labelRollbackDescription.Text" xml:space="preserve">
+    <value>{0} has to be rolled back to version {1} due to unforeseeable problems. You have version {2} installed. Would you like to download it now?</value>
+  </data>
+  <data name="buttonRollback.Text" xml:space="preserve">
+    <value>Rollback</value>
+  </data>
     <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UpdateForm</value>
   </data>

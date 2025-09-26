@@ -246,6 +246,11 @@ public static class AutoUpdater
     public static Mode UpdateMode;
 
     /// <summary>
+    ///     Set this to true if you want to enable rollback/downgrade functionality.
+    /// </summary>
+    public static bool EnableRollback = false;
+
+    /// <summary>
     ///     An event that developers can use to exit the application gracefully.
     /// </summary>
     public static event ApplicationExitEventHandler ApplicationExitEvent;
@@ -440,6 +445,7 @@ public static class AutoUpdater
 
         args.InstalledVersion = InstalledVersion ?? mainAssembly.GetName().Version;
         args.IsUpdateAvailable = new Version(args.CurrentVersion) > args.InstalledVersion;
+        args.IsRollbackAvailable = new Version(args.CurrentVersion) < args.InstalledVersion;
 
         if (!Mandatory)
         {

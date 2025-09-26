@@ -138,6 +138,18 @@
     <data name="labelDescription.Text" xml:space="preserve">
     <value>{0} {1} ist jetzt verfügbar. Aktuell ist Version {2} installiert. Soll die neue Version jetzt heruntergeladen werden?</value>
   </data>
+  <data name="$this.RollbackText" xml:space="preserve">
+    <value>{0} zurücksetzen nötig!</value>
+  </data>
+  <data name="labelRollback.Text" xml:space="preserve">
+    <value>Ein Zurücksetzen von {0} ist erforderlich!</value>
+  </data>
+  <data name="labelRollbackDescription.Text" xml:space="preserve">
+    <value>{0} muss aufgrund unvorhersehbarer Probleme auf die Version {1} zurückgesetzt werden. Aktuell ist Version {2} installiert. Soll die vorherige Version jetzt heruntergeladen werden?</value>
+  </data>
+  <data name="buttonRollback.Text" xml:space="preserve">
+    <value>Zurücksetzen</value>
+  </data>
     <data name="labelReleaseNotes.Text" xml:space="preserve">
     <value>Versionshinweise:</value>
   </data>

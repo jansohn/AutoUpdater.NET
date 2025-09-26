@@ -31,13 +31,31 @@ internal sealed partial class UpdateForm : Form
         buttonSkip.Visible = AutoUpdater.ShowSkipButton;
         buttonRemindLater.Visible = AutoUpdater.ShowRemindLaterButton;
         var resources = new ComponentResourceManager(typeof(UpdateForm));
-        Text = string.Format(resources.GetString("$this.Text", CultureInfo.CurrentCulture)!,
-            AutoUpdater.AppTitle, _args.CurrentVersion);
-        labelUpdate.Text = string.Format(resources.GetString("labelUpdate.Text", CultureInfo.CurrentCulture)!,
-            AutoUpdater.AppTitle);
-        labelDescription.Text =
-            string.Format(resources.GetString("labelDescription.Text", CultureInfo.CurrentCulture)!,
-                AutoUpdater.AppTitle, _args.CurrentVersion, _args.InstalledVersion);
+
+        bool rollbackNecessary = AutoUpdater.EnableRollback && args.IsRollbackAvailable && args.Mandatory.Value;
+
+        if (rollbackNecessary)
+        {
+            Text = string.Format(resources.GetString("$this.RollbackText", CultureInfo.CurrentCulture)!,
+                AutoUpdater.AppTitle);
+            labelUpdate.Text = string.Format(resources.GetString("labelRollback.Text", CultureInfo.CurrentCulture)!,
+                AutoUpdater.AppTitle);
+            labelDescription.Text =
+                string.Format(resources.GetString("labelRollbackDescription.Text", CultureInfo.CurrentCulture)!,
+                    AutoUpdater.AppTitle, _args.CurrentVersion, _args.InstalledVersion);
+            buttonUpdate.Text = resources.GetString("buttonRollback.Text", CultureInfo.CurrentCulture);
+        }
+        else
+        {
+            Text = string.Format(resources.GetString("$this.Text", CultureInfo.CurrentCulture)!,
+                AutoUpdater.AppTitle, _args.CurrentVersion);
+            labelUpdate.Text = string.Format(resources.GetString("labelUpdate.Text", CultureInfo.CurrentCulture)!,
+                AutoUpdater.AppTitle);
+            labelDescription.Text =
+                string.Format(resources.GetString("labelDescription.Text", CultureInfo.CurrentCulture)!,
+                    AutoUpdater.AppTitle, _args.CurrentVersion, _args.InstalledVersion);
+        }
+
 
         if (AutoUpdater.Mandatory && AutoUpdater.UpdateMode == Mode.Forced)
         {
@@ -177,7 +195,7 @@ internal sealed partial class UpdateForm : Form
     {
         if (AutoUpdater.OpenDownloadPage)
         {
-            
+
             var processStartInfo = new ProcessStartInfo(_args.DownloadURL);
 #if NETCOREAPP
             // for .NET Core, UseShellExecute must be set to true, otherwise

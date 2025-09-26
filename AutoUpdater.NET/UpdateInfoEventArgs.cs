@@ -24,6 +24,11 @@ public class UpdateInfoEventArgs : EventArgs
     public bool IsUpdateAvailable { get; set; }
 
     /// <summary>
+    ///     If rollback is available then returns true otherwise false.
+    /// </summary>
+    public bool IsRollbackAvailable { get; set; }
+
+    /// <summary>
     ///     If there is an error while checking for update then this property won't be null.
     /// </summary>
     [XmlIgnore]
